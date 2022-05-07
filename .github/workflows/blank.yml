@@ -27,7 +27,8 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: |
+          echo "version=`git describe --tags --always`" >> $GITHUB_ENV                                       echo "shortversion=`git describe --tag --always --abbrev=0`" >> $GITHUB_ENV                        cat $GITHUB_ENV
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
