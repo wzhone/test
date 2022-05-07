@@ -32,6 +32,8 @@ jobs:
           echo "abc=`git describe --tags`" >> $GITHUB_ENV 
           echo "shortversion=`git describe --tag --always --abbrev=0`" >> $GITHUB_ENV 
           cat $GITHUB_ENV 
+          pwd
+          git tag
           git describe --tags --always 
           git describe --tags 
           git describe --tag --always --abbrev=0 
